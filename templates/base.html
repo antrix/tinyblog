@@ -1,0 +1,35 @@
+$def with (page, title=None)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html><head>
+    <title>\
+$if title: $title : \
+$blog.title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Description" content="Deepak Sarda's Tidbits From The Dungeon - a mini blog." />
+    <meta name="Robots" content="index,follow"/>
+    <meta name="Author" content="Deepak Sarda"/>
+    <meta name="copyright" content="2006, Deepak Sarda" />
+    
+    <link rel="stylesheet" type="text/css" href="$blog.url/static/style.css" />
+    <link rel="alternate" type="application/atom+xml" title="Atom feed"
+          href="$blog.url/feed/" />
+          
+</head>
+<body>
+    
+    <h1><a href="$blog.url/">$blog.title</a></h1>
+    <h2><span class="left">$blog.tagline</span>
+    <span class="right">
+        <a href="$blog.url/feed/">
+           <img style="border: none;" alt="subscribe to feed"
+                title="subscribe to feed" src="$blog.url/static/feed.png" />
+        </a></span>
+    </h2>
+
+
+$:page
+
+</body>
+</html>

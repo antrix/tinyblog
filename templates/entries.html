@@ -1,0 +1,18 @@
+$def with (entries, older, newer)
+
+$for entry in entries:
+    $:render.entry(entry)
+    
+$if older or newer:
+    <div id="pagesnav">
+        <span class="left">
+            $if older:
+                <a href="$blog.url/$older/">« Older Entries</a>
+        </span>
+        <span class="right">
+            $if newer:
+                <a href="$blog.url/$newer/">Newer Entries »</a>
+        </span>&nbsp;
+    </div>
+    
+    

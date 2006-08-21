@@ -1,0 +1,11 @@
+RewriteEngine on
+# Rules to redirect feed requests to feed burner
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner
+RewriteRule ^(.*)/feed/$ http://feeds.feedburner.com/antrix-mini [R,L]
+
+RewriteCond %{REQUEST_URI} !(tb.py)
+RewriteRule ^(.*)$ tb.py/$1  [L]
+
+#Dreamhost needs fcgi extension for FastCGI
+#RewriteCond %{REQUEST_URI} !(tb.fcgi)
+#RewriteRule ^(.*)$ tb.fcgi/$1  [L]

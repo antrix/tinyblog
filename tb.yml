@@ -1,0 +1,27 @@
+---
+title: Tidbits from the Dungeon
+tagline: bite sized chunks of questionable wisdom
+url: http://localhost:8080
+# url: http://antrix.net/mini
+
+author:
+  name: antrix
+  url: http://antrix.net/
+  email: antrix@abovedomain.net
+
+entries:
+- !antrix.net,2006-05/tbEntry
+  id: 2
+  title: ~
+  created: 2006-05-29 16:40:00+08
+  modified: 2006-05-30 16:40:00+08
+  content: |
+    As you can see, `title` is optional. So is the `modified` date. 
+
+- !antrix.net,2006-05/tbEntry
+  id: 1
+  title: Hello World!
+  created: 2006-05-29 16:29:00+08
+  modified: ~
+  content: |
+    This is the first entry.

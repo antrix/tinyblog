@@ -1,0 +1,54 @@
+$def with (entries)
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:xh="http://www.w3.org/1999/xhtml"
+      xml:base="$blog.url/" >
+
+  <title>$blog.title</title>
+  <subtitle>$blog.tagline</subtitle>
+  <id>$blog.url/</id>
+
+  <link href="$blog.url/" />
+  <link rel="self" href="$blog.url/feed/" />
+  
+  <author>
+    <name>$blog.author.name</name>
+    <email>$blog.author.email</email>
+    <uri>$blog.author.url</uri>
+  </author>
+  
+  <rights>Copyright 2006 $blog.author.name</rights>
+
+  <generator uri="http://svn.antrix.net/oort/tb/">tb</generator>
+  
+$if entries[0].modified:
+    <updated>$entries[0].modified.strftime("%Y-%m-%dT%H:%M:%SZ")</updated>
+$else:
+    <updated>$entries[0].created.strftime("%Y-%m-%dT%H:%M:%SZ")</updated>
+  
+<icon>/favicon.jpg</icon>
+
+$for entry in entries:
+    <entry>
+    $if entry.title:
+        <title>$entry.title</title>
+    $else:
+        <title>$entry.created.strftime("%d %b %Y %I:%M %p")</title>
+    
+    <content type="xhtml">
+    <xh:div> $entry.content </xh:div>  
+    </content>
+    
+    <published>$entry.created.strftime("%Y-%m-%dT%H:%M:%SZ")</published>
+    
+    $if entry.modified:
+        <updated>$entry.modified.strftime("%Y-%m-%dT%H:%M:%SZ")</updated>
+    $else:
+        <updated>$entry.created.strftime("%Y-%m-%dT%H:%M:%SZ")</updated>
+    
+    <link rel="alternate" href="$blog.url/entry/$entry.id/"/>
+    <id>$blog.url/entry/$entry.id/</id>
+    
+    </entry>
+ 
+</feed>

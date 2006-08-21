@@ -1,0 +1,16 @@
+$def with (entry)
+
+<div class="entry">
+$if entry.title:
+    <div class="title">$:entry.title</div>
+
+    $:entry.content
+    <div class="anchor"> 
+    $if entry.modified:
+        updated $timesince(entry.modified) ago
+    $else:
+        posted $timesince(entry.created) ago
+    <a class="plink" title="permalink to entry posted on $entry.created" 
+        href="$blog.url/entry/$entry.id/">&nbsp;&#xB6;&nbsp;</a>
+    </div>
+</div>

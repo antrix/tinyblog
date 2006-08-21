@@ -1,0 +1,175 @@
+html 
+{
+    border-top: 15px solid #4477aa;
+}
+
+body {
+    font: 0.9em Helvetica, Arial, sans-serif ;
+    color: #505050;
+    background-color: #ffffff;
+    margin-left: 5%;
+/*     line-height:1.2em; */
+    width: 80%;
+}
+
+
+h1  { 
+    font-family:Verdana, Sans-serif;
+    font-size:2em; 
+    padding: 0.1em;
+    border-bottom: dotted 1px;
+    text-decoration: none;
+ }
+ 
+h1 a {
+    text-decoration: none;
+    color: #505050;
+    font: inherit;
+}
+ 
+h1 a:hover {
+   background-color: #f3f3f3;
+}
+
+h2 {
+   padding: 0.1em;
+   margin: 0 0 3em 0;
+   font-size: 1.2em; 
+}
+    
+span.left {
+  float: left;
+  text-align: left;
+/*   width: 45%; */
+  }
+
+span.right {
+  float: right;
+  text-align: right;
+/*   width: 45%; */
+  }
+
+.entry {
+   padding: 5px;
+   border-bottom: 1px solid #909090;
+   border-right: 1px solid #909090;
+   border-top: 1px solid #ffffff;
+   border-left: 1px solid #ffffff;
+   margin-bottom: 10px;
+/*   background-color: #f0f0f0;*/
+   background-color: #E5F3FF;
+}
+.entry p {
+/*     font-family: Serif; */
+    font-size: 1.0em;
+    line-height:1.5em; 
+}
+.entry:hover {
+/*   border: 1px solid #909090; */
+   /* background-color: #ffe1cc; */
+   /*background-color: #d1eaff;*/
+   /*background-color: #BFE1FF;*/
+}
+
+.entry a:link {
+   color: #505050;
+   text-decoration: none;
+   border-bottom: 1px solid #909090
+}
+
+.entry a:visited {
+   text-decoration: none;
+   color: #909090; 
+}
+
+.entry a:hover {
+   text-decoration: none; 
+   background-color: #909090;
+}
+
+.entry a:visited:hover {
+   background-color: transparent;
+   border-bottom: 1px solid #909090;
+   }
+
+.entry a:link.plink {
+  font-size: 1.6em;
+  text-decoration: none;
+  color: #909090;
+  border: 0;
+}
+.entry a:hover.plink {
+  color: #404040;
+  background-color: transparent;
+}
+.entry a:visited.plink {
+  font-size: 1.6em;
+  }
+
+.entry .title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.entry code {
+    font-family: monospace;
+    font-size: 1.0em;
+}
+.anchor {
+/*     float: right; */
+    padding: 0;
+    margin:  0;
+    font-size: 0.6em;
+    text-align: right;
+}
+
+/* Fool IE, which doesn't undestand hover, 
+   by using child selector which it can't
+   understand */
+.entry>.anchor {
+    visibility: hidden;
+    }
+
+.entry:hover>.anchor {
+   visibility: visible;
+   }
+
+blockquote {
+   margin-left: 0px;
+}
+blockquote .quote-text {
+   color: #339977; /*#66CC33;*/
+   font-family: Garamond, Times, Serif;
+   font-size: 1.1em;
+   font-weight: bold;
+   }
+   
+   
+blockquote .quote-source {
+   padding-left: 3em;
+   font-style: italic;
+   }
+
+#pagesnav {
+   margin: 5em 0em 3em 0em;
+   padding: 0.5em;
+}
+
+#pagesnav a:link {
+   color: black;
+   text-decoration: none;
+}
+
+#pagesnav a:visited {
+   color: #505050;
+   text-decoration: none; 
+}
+
+#pagesnav a:hover {
+   border-bottom: 1px solid black;
+}
+
+#pagesnav a:visited:hover {
+   border-bottom: 1px solid #505050;
+}

@@ -1,0 +1,8 @@
+## tb
+
+tb - teenyblog, tinyblog, tidbits, whatever.
+
+This is a minimal, feature-free blogging script which I use 
+to run http://antrix.net/mini/
+
+Runs on web.py (http://webpy.org/)
