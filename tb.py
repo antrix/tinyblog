@@ -70,6 +70,7 @@ class IndexC:
             
 class EntryC:
     def GET(self, _id):
+        if not _id: return web.seeother(blog.url)
         _id = int(_id)
         entry = None
         for e in blog.entries:
@@ -107,7 +108,7 @@ urls = (
     '/(static)/.*', 'StaticServerC',
     '/(templates)/.*', 'StaticServerC',
     '/feed/?', 'FeedC',
-    '/entry/(\d+)/?', 'EntryC',
+    '/entry/(\d*)/?', 'EntryC',
     '/(\d+)/?', 'IndexC',
     '/?', 'IndexC',
     )

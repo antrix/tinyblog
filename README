@@ -5,8 +5,18 @@ tb - teenyblog, tinyblog, tidbits, whatever.
 This is a minimal, feature-free blogging script which I use 
 to run http://antrix.net/mini/
 
+There's no database to configure and all your posts are saved in
+a single YAML data file. No tags, no web-based ajax post editor
+and no pre-defined post types. You do get a nice Atom feed though!
+
 Runs on web.py (http://webpy.org/)
 
 LICENSE: This software is under public domain. 
          Do as you please.
          No guarantees, warranties, yada, yada.
+
+USAGE: First familiarize yourself with how a typical web.py app works.
+  Then make config changes in `config.py`. Your posts/entries go in
+  `tb.yml`. Just use your favourite text editor to edit the file and 
+  create new entries. Entries can use Markdown syntax.
+
